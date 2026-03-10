@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEO Check - Answer Engine Optimization Audit fuer Ihre Website</title>
+  <meta name="description" content="AEO Check: Umfassender Audit fuer Answer Engine Optimization. Pruefen Sie, wie sichtbar Ihre Website in ChatGPT, Perplexity und anderen KI-Suchmaschinen ist.">
+  <meta name="keywords" content="AEO Check, AEO Audit, Answer Engine Optimization, KI Suchmaschinen, ChatGPT SEO, AI Visibility">
+  <link rel="canonical" href="https://aeocheck.de/">
+  <meta property="og:title" content="AEO Check - Answer Engine Optimization Audit">
+  <meta property="og:description" content="Pruefen Sie Ihre Website-Sichtbarkeit in KI-Suchmaschinen mit unserem umfassenden AEO Audit.">
+  <meta property="og:url" content="https://aeocheck.de/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AEO Check - Answer Engine Optimization Audit">
+  <meta name="twitter:description" content="Umfassender Audit fuer Answer Engine Optimization. Wie sichtbar ist Ihre Website in ChatGPT & Co.?">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyan: {
+              50: '#ecfeff',
+              100: '#cffafe',
+              200: '#a5f3fc',
+              300: '#67e8f9',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              700: '#0e7490',
+              800: '#155e75',
+              900: '#164e63',
+              950: '#083344',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AEO Check",
+    "description": "Umfassender Audit fuer Answer Engine Optimization. Analysiert die Sichtbarkeit Ihrer Website in KI-Suchmaschinen wie ChatGPT, Perplexity und Google AI Overviews.",
+    "url": "https://aeocheck.de/",
+    "applicationCategory": "SEO Tool",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "track by track GmbH",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schliemannstr. 23",
+        "postalCode": "10437",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was genau wird beim AEO Check analysiert?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unser AEO Check analysiert acht zentrale Bereiche: Schema Markup, Content-Struktur, Zitierfaehigkeit, Entity-Abdeckung, FAQ-Optimierung, Autorensignale, Quellenverweise und die llms.txt-Konfiguration. Sie erhalten einen detaillierten Report mit konkreten Handlungsempfehlungen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie unterscheidet sich ein AEO Audit von einem SEO Audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ein klassisches SEO Audit fokussiert sich auf Google-Rankings und technische OnPage-Faktoren. Ein AEO Audit hingegen analysiert, wie gut Ihre Inhalte von KI-Systemen wie ChatGPT, Perplexity oder Google AI Overviews erkannt, verstanden und als Quelle zitiert werden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie lange dauert die AEO Analyse?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die automatisierte Erstanalyse liefert innerhalb weniger Minuten erste Ergebnisse. Der vollstaendige Audit-Report mit manueller Expertenbewertung wird in der Regel innerhalb von 48 Stunden bereitgestellt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Fuer welche Branchen eignet sich der AEO Check?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Der AEO Check eignet sich fuer alle Branchen, in denen Sichtbarkeit in KI-Suchmaschinen relevant ist. Besonders profitieren Unternehmen aus den Bereichen SaaS, E-Commerce, Beratung, Gesundheitswesen und Finanzdienstleistungen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist eine llms.txt und warum ist sie wichtig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die llms.txt ist eine spezielle Datei im Root-Verzeichnis Ihrer Website, die KI-Crawlern strukturierte Informationen ueber Ihr Unternehmen bereitstellt. Sie funktioniert aehnlich wie die robots.txt, ist aber speziell fuer Large Language Models konzipiert."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich den AEO Check auch fuer Wettbewerber-Websites durchfuehren?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Sie koennen den AEO Check fuer jede oeffentlich zugaengliche Website durchfuehren. Das ist besonders nuetzlich fuer Wettbewerbsanalysen, um zu verstehen, warum Konkurrenten in KI-Antworten haeufiger zitiert werden."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-2xl font-extrabold text-cyan-700 tracking-tight">AEO<span class="text-cyan-500">Check</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+        <a href="#so-funktionierts" class="hover:text-cyan-600 transition">So funktioniert's</a>
+        <a href="#pruefpunkte" class="hover:text-cyan-600 transition">Pruefpunkte</a>
+        <a href="#vorteile" class="hover:text-cyan-600 transition">Vorteile</a>
+        <a href="#faq" class="hover:text-cyan-600 transition">FAQ</a>
+        <a href="#kontakt" class="bg-cyan-600 text-white px-5 py-2.5 rounded-lg hover:bg-cyan-700 transition">Audit starten</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-cyan-50 via-white to-sky-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="fade-in">
+        <span class="inline-block bg-cyan-100 text-cyan-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">Kostenloser Erstcheck verfuegbar</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
+          AEO Audit: Wie gut rankt Ihre<br>Website in <span class="text-cyan-600">ChatGPT & Co.</span>?
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+          Millionen Nutzer stellen ihre Fragen nicht mehr bei Google, sondern direkt an KI-Assistenten. Unser AEO Check analysiert systematisch, ob Ihre Website als Quelle in Antworten von ChatGPT, Perplexity, Google AI Overviews und anderen Answer Engines zitiert wird. Erfahren Sie genau, wo Optimierungspotenzial besteht und wie Sie Ihre KI-Sichtbarkeit gezielt steigern.
+        </p>
+        <a href="#kontakt" class="inline-block bg-cyan-600 text-white text-lg font-semibold px-8 py-4 rounded-xl hover:bg-cyan-700 transition shadow-lg shadow-cyan-600/20">Jetzt AEO Audit anfordern &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="py-10 bg-white border-y border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 fade-in">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-3xl font-extrabold text-cyan-600">8</div>
+          <div class="text-sm text-gray-500 mt-1">Pruefkriterien pro Audit</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-cyan-600">48h</div>
+          <div class="text-sm text-gray-500 mt-1">Report-Lieferzeit</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-cyan-600">150+</div>
+          <div class="text-sm text-gray-500 mt-1">Analysierte Websites</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-cyan-600">DACH</div>
+          <div class="text-sm text-gray-500 mt-1">Marktfokus</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- So funktioniert's -->
+  <section id="so-funktionierts" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">So funktioniert der AEO Check</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">In drei einfachen Schritten erhalten Sie einen vollstaendigen Ueberblick ueber Ihre KI-Sichtbarkeit. Unser Analyseprozess kombiniert automatisierte Pruefungen mit manueller Expertenbewertung fuer maximale Aussagekraft.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="fade-in text-center p-8 rounded-2xl bg-cyan-50 border border-cyan-100">
+          <div class="w-16 h-16 bg-cyan-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+          <h3 class="text-xl font-bold mb-3">URL eingeben</h3>
+          <p class="text-gray-600">Teilen Sie uns die URL Ihrer Website oder einzelner Unterseiten mit. Wir analysieren sowohl Startseiten als auch spezifische Landingpages oder Blogartikel, die in KI-Antworten erscheinen sollen.</p>
+        </div>
+        <div class="fade-in text-center p-8 rounded-2xl bg-cyan-50 border border-cyan-100">
+          <div class="w-16 h-16 bg-cyan-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+          <h3 class="text-xl font-bold mb-3">Analyse starten</h3>
+          <p class="text-gray-600">Unsere Audit-Engine durchleuchtet Ihre Inhalte anhand von acht zentralen Pruefkriterien. Dabei simulieren wir, wie KI-Modelle Ihre Seite interpretieren, und bewerten die Zitierfaehigkeit jedes einzelnen Abschnitts.</p>
+        </div>
+        <div class="fade-in text-center p-8 rounded-2xl bg-cyan-50 border border-cyan-100">
+          <div class="w-16 h-16 bg-cyan-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+          <h3 class="text-xl font-bold mb-3">Report erhalten</h3>
+          <p class="text-gray-600">Sie erhalten einen detaillierten Audit-Report mit Scoring, konkreten Handlungsempfehlungen und einer priorisierten Massnahmenliste. So wissen Sie genau, welche Optimierungen den groessten Hebel bieten.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Was wir pruefen -->
+  <section id="pruefpunkte" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Was wir pruefen</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">Jeder AEO Check umfasst acht spezialisierte Pruefbereiche, die gemeinsam bestimmen, wie wahrscheinlich KI-Systeme Ihre Inhalte als vertrauenswuerdige Quelle heranziehen.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="fade-in bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+          <div class="text-3xl mb-4">&#128300;</div>
+          <h3 class="font-bold text-lg mb-2">Schema Markup</h3>
+          <p class="text-gray-600 text-sm">Pruefung auf korrekte strukturierte Daten, die KI-Crawlern klare Signale ueber Inhaltstypen, Organisationen und Zusammenhaenge liefern.</p>
+        </div>
+        <div class="fade-in bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+          <div class="text-3xl mb-4">&#128196;</div>
+          <h3 class="font-bold text-lg mb-2">Content-Struktur</h3>
+          <p class="text-gray-600 text-sm">Analyse der Ueberschriftenhierarchie, Absatzlaengen und semantischen Gliederung fuer optimale maschinelle Lesbarkeit.</p>
+        </div>
+        <div class="fade-in bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+          <div class="text-3xl mb-4">&#128218;</div>
+          <h3 class="font-bold text-lg mb-2">Zitierfaehigkeit</h3>
+          <p class="text-gray-600 text-sm">Bewertung, ob Ihre Inhalte als eigenstaendige, zitierwuerdige Aussagen formuliert sind, die KI-Modelle direkt uebernehmen koennen.</p>
+        </div>
+        <div class="fade-in bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+          <div class="text-3xl mb-4">&#127919;</div>
+          <h3 class="font-bold text-lg mb-2">Entity-Abdeckung</h3>
+          <p class="text-gray-600 text-sm">Pruefung der Abdeckung relevanter Entitaeten, Begriffe und thematischer Cluster, die KI-Systeme mit Ihrem Fachgebiet verknuepfen.</p>
+        </div>
+        <div class="fade-in bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+          <div class="text-3xl mb-4">&#10067;</div>
+          <h3 class="font-bold text-lg mb-2">FAQ-Optimierung</h3>
+          <p class="text-gray-600 text-sm">Analyse Ihrer Frage-Antwort-Strukturen auf Praezision, Vollstaendigkeit und Eignung fuer die direkte Uebernahme in KI-generierte Antworten.</p>
+        </div>
+        <div class="fade-in bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+          <div class="text-3xl mb-4">&#9997;</div>
+          <h3 class="font-bold text-lg mb-2">Autorensignale</h3>
+          <p class="text-gray-600 text-sm">Bewertung von Autorenangaben, Expertise-Nachweisen und E-E-A-T-Signalen, die Vertrauenswuerdigkeit gegenueber KI-Systemen aufbauen.</p>
+        </div>
+        <div class="fade-in bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+          <div class="text-3xl mb-4">&#128279;</div>
+          <h3 class="font-bold text-lg mb-2">Quellenverweise</h3>
+          <p class="text-gray-600 text-sm">Pruefung externer und interner Verlinkungen, Zitationsstrukturen und Referenzen, die Ihre Autoritaet in einem Themenfeld staerken.</p>
+        </div>
+        <div class="fade-in bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+          <div class="text-3xl mb-4">&#129302;</div>
+          <h3 class="font-bold text-lg mb-2">llms.txt</h3>
+          <p class="text-gray-600 text-sm">Kontrolle der llms.txt-Datei, die KI-Crawlern strukturierte Metadaten ueber Ihr Unternehmen und Ihre Inhalte bereitstellt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEO vs. klassisches SEO -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="fade-in grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold mb-6">AEO vs. klassisches SEO</h2>
+          <p class="text-gray-600 text-lg leading-relaxed mb-6">
+            Klassische Suchmaschinenoptimierung zielt darauf ab, moeglichst weit oben in den Google-Ergebnislisten zu erscheinen. Answer Engine Optimization verfolgt ein grundlegend anderes Ziel: Ihre Inhalte sollen direkt als Quelle in KI-generierten Antworten zitiert werden.
+          </p>
+          <p class="text-gray-600 text-lg leading-relaxed mb-6">
+            Waehrend SEO auf Keywords, Backlinks und technische Performance setzt, konzentriert sich AEO auf semantische Klarheit, strukturierte Daten und die Zitierfaehigkeit Ihrer Inhalte. Ein gutes Google-Ranking garantiert nicht, dass ChatGPT oder Perplexity Ihre Website als Quelle nutzen.
+          </p>
+          <p class="text-gray-600 text-lg leading-relaxed">
+            Unser AEO Check schliesst genau diese Luecke und zeigt Ihnen, wo Ihre Website aus Sicht von KI-Assistenten steht und welche gezielten Massnahmen Ihre Sichtbarkeit in Answer Engines messbar verbessern.
+          </p>
+        </div>
+        <div class="bg-gradient-to-br from-cyan-50 to-sky-50 rounded-2xl p-8 border border-cyan-100">
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-bold text-cyan-700 mb-2">Klassisches SEO</h4>
+              <ul class="text-gray-600 space-y-1 text-sm">
+                <li>&#8226; Fokus auf Google-Rankings & SERP-Positionen</li>
+                <li>&#8226; Keyword-Dichte & Backlink-Profil</li>
+                <li>&#8226; Click-Through-Rate optimieren</li>
+                <li>&#8226; Technische Performance & Core Web Vitals</li>
+              </ul>
+            </div>
+            <div class="border-t border-cyan-200 pt-6">
+              <h4 class="font-bold text-cyan-700 mb-2">Answer Engine Optimization</h4>
+              <ul class="text-gray-600 space-y-1 text-sm">
+                <li>&#8226; Fokus auf KI-Zitierungen & Quellennennung</li>
+                <li>&#8226; Semantische Struktur & Entity-Signale</li>
+                <li>&#8226; Zitierfaehigkeit & Antwortpraezision</li>
+                <li>&#8226; Strukturierte Daten & llms.txt</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vorteile -->
+  <section id="vorteile" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Warum ein AEO Audit unverzichtbar ist</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">Wer heute nicht in KI-Antworten auftaucht, verliert morgen relevanten Traffic. Ein professioneller AEO Check gibt Ihnen die Datenbasis fuer strategische Entscheidungen.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="fade-in bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 text-xl font-bold mb-4">&#9733;</div>
+          <h3 class="font-bold text-lg mb-2">Fruehzeitiger Wettbewerbsvorteil</h3>
+          <p class="text-gray-600 text-sm">Die meisten Unternehmen haben AEO noch nicht auf dem Radar. Wer jetzt optimiert, sichert sich einen entscheidenden Vorsprung in den KI-Antwortquellen.</p>
+        </div>
+        <div class="fade-in bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 text-xl font-bold mb-4">&#128200;</div>
+          <h3 class="font-bold text-lg mb-2">Datenbasierte Optimierung</h3>
+          <p class="text-gray-600 text-sm">Statt im Dunkeln zu tappen, erhalten Sie messbare Kennzahlen und klare Handlungsempfehlungen fuer jede einzelne Seite Ihrer Website.</p>
+        </div>
+        <div class="fade-in bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 text-xl font-bold mb-4">&#128176;</div>
+          <h3 class="font-bold text-lg mb-2">Neuer Traffic-Kanal</h3>
+          <p class="text-gray-600 text-sm">KI-Suchmaschinen werden zunehmend zur ersten Anlaufstelle fuer Nutzer. AEO-optimierte Inhalte erschliessen diesen wachsenden Traffic-Kanal gezielt.</p>
+        </div>
+        <div class="fade-in bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 text-xl font-bold mb-4">&#128101;</div>
+          <h3 class="font-bold text-lg mb-2">Expertenstatus staerken</h3>
+          <p class="text-gray-600 text-sm">Wenn KI-Assistenten Ihre Website als Quelle zitieren, staerkt das Ihre Wahrnehmung als Branchenexperte nachhaltig bei Ihrer Zielgruppe.</p>
+        </div>
+        <div class="fade-in bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 text-xl font-bold mb-4">&#9881;</div>
+          <h3 class="font-bold text-lg mb-2">Sofort umsetzbare Massnahmen</h3>
+          <p class="text-gray-600 text-sm">Jeder Audit-Report enthaelt priorisierte To-Dos mit geschaetztem Aufwand, sodass Sie oder Ihr Entwicklerteam direkt mit der Umsetzung beginnen koennen.</p>
+        </div>
+        <div class="fade-in bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 text-xl font-bold mb-4">&#128640;</div>
+          <h3 class="font-bold text-lg mb-2">Zukunftssichere Strategie</h3>
+          <p class="text-gray-600 text-sm">Der Trend zur KI-Suche ist unumkehrbar. Mit einem regelmaessigen AEO Audit stellen Sie sicher, dass Ihre Inhalte langfristig sichtbar bleiben.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Geo SEO -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">AEO Agentur fuer den DACH-Raum</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-10">Als spezialisierte AEO Agentur unterstuetzen wir Unternehmen in ganz Deutschland, Oesterreich und der Schweiz bei der Optimierung fuer KI-Suchmaschinen.</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Berlin</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Hamburg</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Muenchen</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Koeln</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Frankfurt</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Stuttgart</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Duesseldorf</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Leipzig</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Dresden</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Hannover</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Wien</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Zuerich</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Nuernberg</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Bremen</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Dortmund</span>
+        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Essen</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Haeufige Fragen zum AEO Check</h2>
+      </div>
+      <div class="space-y-6">
+        <div class="fade-in bg-white rounded-2xl border border-gray-100 p-6">
+          <h3 class="font-bold text-lg mb-2">Was genau wird beim AEO Check analysiert?</h3>
+          <p class="text-gray-600">Unser AEO Check analysiert acht zentrale Bereiche: Schema Markup, Content-Struktur, Zitierfaehigkeit, Entity-Abdeckung, FAQ-Optimierung, Autorensignale, Quellenverweise und die llms.txt-Konfiguration. Sie erhalten einen detaillierten Report mit konkreten Handlungsempfehlungen.</p>
+        </div>
+        <div class="fade-in bg-white rounded-2xl border border-gray-100 p-6">
+          <h3 class="font-bold text-lg mb-2">Wie unterscheidet sich ein AEO Audit von einem SEO Audit?</h3>
+          <p class="text-gray-600">Ein klassisches SEO Audit fokussiert sich auf Google-Rankings und technische OnPage-Faktoren. Ein AEO Audit hingegen analysiert, wie gut Ihre Inhalte von KI-Systemen wie ChatGPT, Perplexity oder Google AI Overviews erkannt, verstanden und als Quelle zitiert werden.</p>
+        </div>
+        <div class="fade-in bg-white rounded-2xl border border-gray-100 p-6">
+          <h3 class="font-bold text-lg mb-2">Wie lange dauert die AEO Analyse?</h3>
+          <p class="text-gray-600">Die automatisierte Erstanalyse liefert innerhalb weniger Minuten erste Ergebnisse. Der vollstaendige Audit-Report mit manueller Expertenbewertung wird in der Regel innerhalb von 48 Stunden bereitgestellt.</p>
+        </div>
+        <div class="fade-in bg-white rounded-2xl border border-gray-100 p-6">
+          <h3 class="font-bold text-lg mb-2">Fuer welche Branchen eignet sich der AEO Check?</h3>
+          <p class="text-gray-600">Der AEO Check eignet sich fuer alle Branchen, in denen Sichtbarkeit in KI-Suchmaschinen relevant ist. Besonders profitieren Unternehmen aus den Bereichen SaaS, E-Commerce, Beratung, Gesundheitswesen und Finanzdienstleistungen.</p>
+        </div>
+        <div class="fade-in bg-white rounded-2xl border border-gray-100 p-6">
+          <h3 class="font-bold text-lg mb-2">Was ist eine llms.txt und warum ist sie wichtig?</h3>
+          <p class="text-gray-600">Die llms.txt ist eine spezielle Datei im Root-Verzeichnis Ihrer Website, die KI-Crawlern strukturierte Informationen ueber Ihr Unternehmen bereitstellt. Sie funktioniert aehnlich wie die robots.txt, ist aber speziell fuer Large Language Models konzipiert und verbessert deren Verstaendnis Ihrer Inhalte.</p>
+        </div>
+        <div class="fade-in bg-white rounded-2xl border border-gray-100 p-6">
+          <h3 class="font-bold text-lg mb-2">Kann ich den AEO Check auch fuer Wettbewerber-Websites durchfuehren?</h3>
+          <p class="text-gray-600">Ja, Sie koennen den AEO Check fuer jede oeffentlich zugaengliche Website durchfuehren. Das ist besonders nuetzlich fuer Wettbewerbsanalysen, um zu verstehen, warum Konkurrenten in KI-Antworten haeufiger zitiert werden und wo Ihre eigenen Optimierungschancen liegen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Kontakt -->
+  <section id="kontakt" class="py-20 bg-gradient-to-br from-cyan-600 to-sky-700">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Jetzt AEO Audit starten</h2>
+        <p class="text-cyan-100 text-lg">Senden Sie uns Ihre Website-URL und erhalten Sie innerhalb von 48 Stunden Ihren individuellen AEO Audit-Report mit konkreten Optimierungsempfehlungen.</p>
+      </div>
+      <form action="https://formspree.io/f/xpwzgdol" method="POST" class="fade-in bg-white rounded-2xl p-8 shadow-2xl">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
+            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 outline-none transition" placeholder="Ihr Name">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">E-Mail</label>
+            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 outline-none transition" placeholder="ihre@email.de">
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Website-URL</label>
+          <input type="url" name="url" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 outline-none transition" placeholder="https://ihre-website.de">
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm font-semibold text-gray-700 mb-2">Nachricht (optional)</label>
+          <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 outline-none transition" placeholder="Gibt es bestimmte Seiten oder Themen, die Sie besonders interessieren?"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-cyan-600 text-white font-semibold py-4 rounded-lg hover:bg-cyan-700 transition shadow-lg">Kostenlosen Erstcheck anfordern</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <span class="text-2xl font-extrabold text-white">AEO<span class="text-cyan-400">Check</span></span>
+          <p class="mt-4 text-sm leading-relaxed">Ihr Spezialist fuer Answer Engine Optimization Audits. Wir analysieren, wie sichtbar Ihre Website in KI-Suchmaschinen ist, und liefern konkrete Optimierungsempfehlungen.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Kontakt</h4>
+          <p class="text-sm leading-relaxed">
+            track by track GmbH<br>
+            Schliemannstr. 23<br>
+            10437 Berlin<br><br>
+            <a href="mailto:hi@aeocheck.de" class="text-cyan-400 hover:text-cyan-300 transition">hi@aeocheck.de</a>
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Rechtliches</h4>
+          <p class="text-sm leading-relaxed">
+            Geschaeftsfuehrer: Robert Wilken<br>
+            HRB 262652 B<br>
+            AG Charlottenburg<br>
+            USt-IdNr: DE364798628
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-sm">
+        &copy; 2025 track by track GmbH. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fade-in Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>
