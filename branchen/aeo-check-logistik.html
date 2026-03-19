@@ -194,7 +194,7 @@
   overlay.addEventListener('click',function(e){if(e.target===overlay)overlay.style.display='none'});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')overlay.style.display='none'});
   // Make openAuditModal available globally for inline onclick handlers
-  window.openAuditModal=function(){overlay.style.display='flex'};
+  window.openAuditModal=function(){overlay.style.display='flex';var bf=overlay.querySelector('input[name="branche"]');if(bf)bf.value='Logistik & Spedition';};
   form.addEventListener('submit',function(e){
     e.preventDefault();
     if(!document.getElementById('auditGdpr').checked){msg.style.display='block';msg.style.background='#fef2f2';msg.style.color='#dc2626';msg.textContent='Bitte Datenschutz akzeptieren.';return}
