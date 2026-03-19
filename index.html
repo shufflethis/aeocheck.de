@@ -155,9 +155,10 @@
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="/" class="text-2xl font-extrabold text-cyan-700 tracking-tight">AEO<span class="text-cyan-500">Check</span></a>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+        <a href="#aeo-tool" class="hover:text-cyan-600 transition">AEO Check</a>
         <a href="#so-funktionierts" class="hover:text-cyan-600 transition">So funktioniert's</a>
         <a href="#pruefpunkte" class="hover:text-cyan-600 transition">Pruefpunkte</a>
-        <a href="#vorteile" class="hover:text-cyan-600 transition">Vorteile</a>
+        <a href="#branchen" class="hover:text-cyan-600 transition">Branchen</a>
         <a href="#faq" class="hover:text-cyan-600 transition">FAQ</a>
         <a href="#kontakt" class="bg-cyan-600 text-white px-5 py-2.5 rounded-lg hover:bg-cyan-700 transition">Audit starten</a>
       </div>
@@ -199,6 +200,51 @@
         <div>
           <div class="text-3xl font-extrabold text-cyan-600">DACH</div>
           <div class="text-sm text-gray-500 mt-1">Marktfokus</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEO Check Tool -->
+  <section id="aeo-tool" class="py-20 bg-gradient-to-b from-white to-cyan-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Kostenloser AEO Quick-Check</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">Geben Sie Ihre URL ein und erhalten Sie eine sofortige Ersteinschaetzung Ihrer AEO-Readiness. Unser Tool prueft die wichtigsten Signale, die KI-Suchmaschinen fuer die Quellenauswahl heranziehen.</p>
+      </div>
+      <div class="fade-in bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+          <input type="url" id="aeo-url-input" class="flex-1 px-5 py-4 rounded-xl border border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200 outline-none transition text-lg" placeholder="https://ihre-website.de">
+          <button onclick="runAEOCheck()" id="aeo-check-btn" class="bg-cyan-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-cyan-700 transition shadow-lg shadow-cyan-600/20 whitespace-nowrap">Jetzt pruefen</button>
+        </div>
+        <div id="aeo-result" class="hidden">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <div id="aeo-score-circle" class="w-24 h-24 rounded-full flex items-center justify-center text-3xl font-extrabold text-white" style="background: conic-gradient(#06b6d4 0%, #e5e7eb 0%)">0</div>
+                <div>
+                  <div class="text-xl font-bold" id="aeo-score-label">AEO Score</div>
+                  <div class="text-gray-500 text-sm" id="aeo-score-desc">Analyse laeuft...</div>
+                </div>
+              </div>
+              <div id="aeo-checks-list" class="space-y-3"></div>
+            </div>
+            <div>
+              <canvas id="aeo-radar" width="300" height="300"></canvas>
+            </div>
+          </div>
+          <div class="mt-8 p-6 bg-cyan-50 rounded-xl border border-cyan-100">
+            <p class="text-sm text-gray-600 mb-3"><strong>Hinweis:</strong> Dieser Quick-Check gibt eine erste Orientierung. Fuer eine vollstaendige Analyse mit manueller Expertenbewertung empfehlen wir unseren detaillierten AEO Audit.</p>
+            <a href="#kontakt" class="inline-block bg-cyan-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-cyan-700 transition text-sm">Vollstaendigen Audit anfordern &rarr;</a>
+          </div>
+        </div>
+        <div id="aeo-loading" class="hidden text-center py-12">
+          <div class="inline-block w-12 h-12 border-4 border-cyan-200 border-t-cyan-600 rounded-full animate-spin"></div>
+          <p class="text-gray-500 mt-4">Website wird analysiert...</p>
+        </div>
+        <div id="aeo-error" class="hidden text-center py-8">
+          <p class="text-red-500 font-medium" id="aeo-error-msg"></p>
+          <p class="text-gray-500 text-sm mt-2">Tipp: Stellen Sie sicher, dass die URL oeffentlich erreichbar ist.</p>
         </div>
       </div>
     </div>
@@ -367,28 +413,165 @@
     </div>
   </section>
 
-  <!-- Geo SEO -->
+  <!-- Warum AEO wichtig ist -->
   <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6 text-center fade-in">
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">AEO Agentur fuer den DACH-Raum</h2>
-      <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-10">Als spezialisierte AEO Agentur unterstuetzen wir Unternehmen in ganz Deutschland, Oesterreich und der Schweiz bei der Optimierung fuer KI-Suchmaschinen.</p>
-      <div class="flex flex-wrap justify-center gap-3">
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Berlin</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Hamburg</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Muenchen</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Koeln</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Frankfurt</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Stuttgart</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Duesseldorf</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Leipzig</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Dresden</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Hannover</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Wien</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Zuerich</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Nuernberg</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Bremen</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Dortmund</span>
-        <span class="bg-cyan-50 text-cyan-700 px-4 py-2 rounded-full text-sm font-medium border border-cyan-100">AEO Agentur Essen</span>
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Warum AEO 2026 unverzichtbar ist</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">Die Art, wie Menschen nach Informationen suchen, veraendert sich rasant. KI-Assistenten uebernehmen zunehmend die Rolle klassischer Suchmaschinen und bestimmen, welche Quellen Nutzer sehen.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-b from-cyan-50 to-white border border-cyan-100">
+          <div class="text-4xl font-extrabold text-cyan-600 mb-2">40%</div>
+          <p class="text-gray-600 text-sm">der Gen-Z nutzen KI-Assistenten statt Google fuer ihre Recherche</p>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-b from-cyan-50 to-white border border-cyan-100">
+          <div class="text-4xl font-extrabold text-cyan-600 mb-2">1 Mrd.+</div>
+          <p class="text-gray-600 text-sm">woechentliche ChatGPT-Nutzer weltweit seit Ende 2025</p>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-b from-cyan-50 to-white border border-cyan-100">
+          <div class="text-4xl font-extrabold text-cyan-600 mb-2">60%</div>
+          <p class="text-gray-600 text-sm">weniger organische Klicks durch AI Overviews bei informationellen Suchanfragen</p>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-b from-cyan-50 to-white border border-cyan-100">
+          <div class="text-4xl font-extrabold text-cyan-600 mb-2">3x</div>
+          <p class="text-gray-600 text-sm">hoehere Conversion-Rate bei Traffic aus KI-Empfehlungen vs. organischer Suche</p>
+        </div>
+      </div>
+      <div class="mt-12 fade-in">
+        <p class="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">Unternehmen, die heute systematisch in Answer Engine Optimization investieren, sichern sich einen erheblichen Wettbewerbsvorteil. Waehrend klassisches SEO weiterhin relevant bleibt, entscheidet die Sichtbarkeit in KI-generierten Antworten zunehmend darueber, welche Marken als vertrauenswuerdige Autoritaet wahrgenommen werden. Der AEO Check bildet die Grundlage fuer eine datenbasierte Optimierungsstrategie, die beide Kanaele – klassische Suche und KI-Assistenten – gezielt adressiert.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branchen -->
+  <section id="branchen" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">AEO Check fuer Ihre Branche</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">Jede Branche hat spezifische Anforderungen an die KI-Sichtbarkeit. Erfahren Sie, wie der AEO Check speziell fuer Ihr Geschaeftsfeld funktioniert und welche Optimierungspotenziale bestehen.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 fade-in">
+        <a href="branchen/aeo-check-e-commerce.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128722;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">E-Commerce</span>
+        </a>
+        <a href="branchen/aeo-check-saas-software.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128187;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">SaaS & Software</span>
+        </a>
+        <a href="branchen/aeo-check-finanzdienstleistungen.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#127974;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Finanzen & Banken</span>
+        </a>
+        <a href="branchen/aeo-check-versicherungen.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128737;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Versicherungen</span>
+        </a>
+        <a href="branchen/aeo-check-gesundheitswesen.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#127973;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Gesundheitswesen</span>
+        </a>
+        <a href="branchen/aeo-check-rechtsanwaelte.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#9878;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Rechtsanwaelte</span>
+        </a>
+        <a href="branchen/aeo-check-immobilien.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#127968;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Immobilien</span>
+        </a>
+        <a href="branchen/aeo-check-automobil.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128663;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Automobil</span>
+        </a>
+        <a href="branchen/aeo-check-gastronomie.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#127860;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Gastronomie</span>
+        </a>
+        <a href="branchen/aeo-check-hotellerie-tourismus.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#127752;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Hotellerie & Tourismus</span>
+        </a>
+        <a href="branchen/aeo-check-handwerk.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128295;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Handwerk</span>
+        </a>
+        <a href="branchen/aeo-check-bildung.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#127891;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Bildung</span>
+        </a>
+        <a href="branchen/aeo-check-it-technologie.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128421;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">IT & Technologie</span>
+        </a>
+        <a href="branchen/aeo-check-pharma.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128138;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Pharma</span>
+        </a>
+        <a href="branchen/aeo-check-energie.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#9889;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Energie</span>
+        </a>
+        <a href="branchen/aeo-check-logistik.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128666;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Logistik</span>
+        </a>
+        <a href="branchen/aeo-check-steuerberater.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128202;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Steuerberater</span>
+        </a>
+        <a href="branchen/aeo-check-unternehmensberatung.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128188;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Consulting</span>
+        </a>
+        <a href="branchen/aeo-check-mode-fashion.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128087;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Mode & Fashion</span>
+        </a>
+        <a href="branchen/aeo-check-lebensmittel.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#127822;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Lebensmittel</span>
+        </a>
+        <a href="branchen/aeo-check-personalberatung.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#129309;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Recruiting</span>
+        </a>
+        <a href="branchen/aeo-check-architektur.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#127959;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Architektur</span>
+        </a>
+        <a href="branchen/aeo-check-fitness.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128170;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Fitness</span>
+        </a>
+        <a href="branchen/aeo-check-kosmetik.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128132;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Kosmetik</span>
+        </a>
+        <a href="branchen/aeo-check-telekommunikation.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128241;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Telekommunikation</span>
+        </a>
+        <a href="branchen/aeo-check-maschinenbau.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#9881;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Maschinenbau</span>
+        </a>
+        <a href="branchen/aeo-check-agrarwirtschaft.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#127806;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Agrarwirtschaft</span>
+        </a>
+        <a href="branchen/aeo-check-medien-verlage.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128240;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Medien & Verlage</span>
+        </a>
+        <a href="branchen/aeo-check-non-profit.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#128156;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Non-Profit</span>
+        </a>
+        <a href="branchen/aeo-check-gebaeudereinigung.html" class="group bg-white p-4 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-md transition text-center">
+          <div class="text-2xl mb-2">&#129529;</div>
+          <span class="text-sm font-medium text-gray-700 group-hover:text-cyan-600 transition">Facility Management</span>
+        </a>
       </div>
     </div>
   </section>
@@ -473,7 +656,7 @@
             track by track GmbH<br>
             Schliemannstr. 23<br>
             10437 Berlin<br><br>
-            <a href="mailto:info@famefact.com" class="text-cyan-400 hover:text-cyan-300 transition">info@famefact.com</a>
+            <a href="mailto:hi@aeo-check.de" class="text-cyan-400 hover:text-cyan-300 transition">hi@aeo-check.de</a>
           </p>
         </div>
         <div>
@@ -497,16 +680,79 @@
     document.addEventListener('DOMContentLoaded', function() {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
+          if (entry.isIntersecting) entry.target.classList.add('visible');
         });
       }, { threshold: 0.1 });
-
-      document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-      });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     });
+
+    const PROXY = 'https://api.allorigins.win/raw?url=';
+    const CHECKS = [
+      { key: 'schema', label: 'Schema Markup', test: h => /application\/ld\+json/i.test(h) },
+      { key: 'headings', label: 'Ueberschriften-Hierarchie', test: h => /<h1[\s>]/i.test(h) && /<h2[\s>]/i.test(h) },
+      { key: 'meta', label: 'Meta-Beschreibung', test: h => /meta\s+name=["']description["']/i.test(h) },
+      { key: 'faq', label: 'FAQ-Struktur', test: h => /FAQPage/i.test(h) || (/<(details|summary)[\s>]/i.test(h)) },
+      { key: 'canonical', label: 'Canonical URL', test: h => /rel=["']canonical["']/i.test(h) },
+      { key: 'ogTags', label: 'Open Graph Tags', test: h => /og:title/i.test(h) && /og:description/i.test(h) },
+      { key: 'author', label: 'Autorensignale', test: h => /author/i.test(h) || /person/i.test(h) },
+      { key: 'contentLen', label: 'Content-Tiefe (>1000 Worte)', test: h => { const t = h.replace(/<[^>]+>/g, ' '); return t.split(/\s+/).length > 1000; } }
+    ];
+
+    async function runAEOCheck() {
+      const url = document.getElementById('aeo-url-input').value.trim();
+      if (!url) return;
+      const result = document.getElementById('aeo-result');
+      const loading = document.getElementById('aeo-loading');
+      const error = document.getElementById('aeo-error');
+      result.classList.add('hidden'); error.classList.add('hidden'); loading.classList.remove('hidden');
+      try {
+        const res = await fetch(PROXY + encodeURIComponent(url));
+        if (!res.ok) throw new Error('Seite nicht erreichbar');
+        const html = await res.text();
+        const scores = CHECKS.map(c => ({ ...c, pass: c.test(html) }));
+        const total = Math.round((scores.filter(s => s.pass).length / scores.length) * 100);
+        renderResults(scores, total);
+        loading.classList.add('hidden'); result.classList.remove('hidden');
+        plausible('AEO Check', { props: { url, score: total } });
+      } catch (e) {
+        loading.classList.add('hidden'); error.classList.remove('hidden');
+        document.getElementById('aeo-error-msg').textContent = 'Analyse fehlgeschlagen: ' + e.message;
+      }
+    }
+
+    function renderResults(scores, total) {
+      const circle = document.getElementById('aeo-score-circle');
+      circle.textContent = total;
+      circle.style.background = `conic-gradient(${total >= 70 ? '#06b6d4' : total >= 40 ? '#f59e0b' : '#ef4444'} ${total * 3.6}deg, #e5e7eb ${total * 3.6}deg)`;
+      const desc = document.getElementById('aeo-score-desc');
+      desc.textContent = total >= 70 ? 'Gute AEO-Basis' : total >= 40 ? 'Optimierungsbedarf' : 'Dringender Handlungsbedarf';
+      const list = document.getElementById('aeo-checks-list');
+      list.innerHTML = scores.map(s => `<div class="flex items-center gap-3"><span class="w-6 h-6 rounded-full flex items-center justify-center text-sm ${s.pass ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-500'}">${s.pass ? '&#10003;' : '&#10007;'}</span><span class="text-sm ${s.pass ? 'text-gray-700' : 'text-gray-500'}">${s.label}</span></div>`).join('');
+      drawRadar(scores);
+    }
+
+    function drawRadar(scores) {
+      const canvas = document.getElementById('aeo-radar');
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width, h = canvas.height, cx = w / 2, cy = h / 2, r = Math.min(w, h) / 2 - 40;
+      ctx.clearRect(0, 0, w, h);
+      const n = scores.length;
+      // grid
+      ctx.strokeStyle = '#e5e7eb'; ctx.lineWidth = 1;
+      [0.25, 0.5, 0.75, 1].forEach(s => {
+        ctx.beginPath();
+        for (let i = 0; i <= n; i++) { const a = (Math.PI * 2 * i) / n - Math.PI / 2; ctx.lineTo(cx + r * s * Math.cos(a), cy + r * s * Math.sin(a)); }
+        ctx.stroke();
+      });
+      // data
+      ctx.fillStyle = 'rgba(6,182,212,0.15)'; ctx.strokeStyle = '#06b6d4'; ctx.lineWidth = 2;
+      ctx.beginPath();
+      scores.forEach((s, i) => { const a = (Math.PI * 2 * i) / n - Math.PI / 2; const v = s.pass ? 1 : 0.15; ctx.lineTo(cx + r * v * Math.cos(a), cy + r * v * Math.sin(a)); });
+      ctx.closePath(); ctx.fill(); ctx.stroke();
+      // labels
+      ctx.fillStyle = '#374151'; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+      scores.forEach((s, i) => { const a = (Math.PI * 2 * i) / n - Math.PI / 2; const lx = cx + (r + 25) * Math.cos(a); const ly = cy + (r + 25) * Math.sin(a); ctx.fillText(s.label.split(' ')[0], lx, ly + 4); });
+    }
   </script>
 
 <!-- Floating Audit Button + Modal -->

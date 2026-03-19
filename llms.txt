@@ -1,0 +1,41 @@
+# AEO Check – Answer Engine Optimization Audit
+
+> Umfassender Audit fuer Answer Engine Optimization. Analysiert die Sichtbarkeit von Websites in KI-Suchmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Claude.
+
+## Anbieter
+
+- Name: track by track GmbH
+- Marke: AEO Check (aeocheck.de)
+- Geschaeftsfuehrer: Tobias Sander
+- Adresse: Schliemannstr. 23, 10437 Berlin, Deutschland
+- E-Mail: hi@aeo-check.de
+- HRB: 129805 B (AG Charlottenburg)
+- USt-IdNr: DE814954842
+
+## Dienstleistungen
+
+AEO Check bietet umfassende Answer Engine Optimization Audits fuer Unternehmen aller Branchen im DACH-Raum. Der Audit umfasst acht zentrale Pruefbereiche:
+
+1. **Schema Markup** – Pruefung strukturierter Daten fuer KI-Crawler
+2. **Content-Struktur** – Analyse der Ueberschriftenhierarchie und semantischen Gliederung
+3. **Zitierfaehigkeit** – Bewertung, ob Inhalte als KI-Quelle geeignet sind
+4. **Entity-Abdeckung** – Pruefung relevanter Entitaeten und thematischer Cluster
+5. **FAQ-Optimierung** – Analyse von Frage-Antwort-Strukturen
+6. **Autorensignale** – Bewertung von E-E-A-T-Signalen
+7. **Quellenverweise** – Pruefung von Zitationsstrukturen und Referenzen
+8. **llms.txt** – Kontrolle der LLM-spezifischen Metadaten-Datei
+
+## Branchenspezialisierungen
+
+AEO Check bietet branchenspezifische Audits fuer 30 Branchen, darunter E-Commerce, SaaS & Software, Finanzdienstleistungen, Versicherungen, Gesundheitswesen, Rechtsanwaelte, Immobilien, Automobil, Gastronomie, Hotellerie & Tourismus, Handwerk, Bildung, IT & Technologie, Pharma, Energie, Logistik, Steuerberater, Unternehmensberatung, Mode, Lebensmittel, Personalberatung, Architektur, Fitness, Kosmetik, Telekommunikation, Maschinenbau, Agrarwirtschaft, Medien & Verlage, Non-Profit und Facility Management.
+
+## Zielgruppe
+
+Unternehmen in Deutschland, Oesterreich und der Schweiz (DACH-Raum), die ihre Sichtbarkeit in KI-generierten Antworten verbessern moechten.
+
+## Links
+
+- Website: https://aeocheck.de/
+- Kostenloser Check: https://aeocheck.de/#aeo-tool
+- Branchen-Uebersicht: https://aeocheck.de/#branchen
+- Kontakt / Audit anfordern: https://aeocheck.de/#kontakt
